@@ -1,5 +1,5 @@
 .header {
-    background: #222222;
+    background: #065df4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,6 @@
     height: 100%;
     align-items: flex-end;
 }
-
 .newTaskForm input {
     height: 5.4rem;
     flex: 1;
@@ -31,7 +30,34 @@
     border-radius: 5px;
     padding: 0 1.6rem;
     font-size: 1.6rem;
+    transition: border-color 0.3s, box-shadow 0.1s;
 }
+
+.newTaskForm input:focus {
+    outline: none;
+    border-color: #fafafa; 
+    box-shadow: 0 0 0 3px rgba(98, 135, 255, 0.3); 
+}
+
+.newTaskForm input::placeholder {
+    letter-spacing: 1.5px;
+}
+
+.newTaskForm input.typing {
+    animation-name: typingAnimation;
+    animation-duration: 0.1s; 
+    animation-fill-mode: backwards; 
+}
+
+@keyframes typingAnimation {
+    from {
+        transform: scale(1); 
+    }
+    to {
+        transform: scale(1.05); 
+    }
+}
+
 
 .newTaskForm input:focus {
     outline: none;
@@ -40,7 +66,6 @@
 .newTaskForm input::placeholder {
     letter-spacing: 1.5px;
 }
-
 .newTaskForm button {
     height: 5.4rem;
     padding: 0 2.4rem;
@@ -55,7 +80,14 @@
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 0.6px;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
 }
+
+.newTaskForm button:hover {
+    background-color: 
+    #070707; /* Change background color on hover */
+}
+
 
 @media screen and (max-width: 1024px) {
     .newTaskForm {
