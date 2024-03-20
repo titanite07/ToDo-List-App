@@ -12,21 +12,17 @@
 .checkContainer {
     width: 2rem;
     height: 2rem;
-    background: none;
-    border: none;
+    background-color: #222222;
+    border: #fff solid 2px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.checkContainer div {
-    width: 100%;
-    height: 100%;
-    border: 2px solid #6287ff;
-    border-radius: 50%;
-}
-
-.checkContainer svg {
-    width: 100%;
-    height: 100%;
-    color: #6287ff;
+.checkIcon {
+    color: #00f408; /* Color of the tick mark icon */
+    font-size: 1.5rem; /* Adjust size of the icon */
 }
 
 .task p {
